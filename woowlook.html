@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <title>Document</title>
+  </head>
+  <body class="bg-black">
+    <div>
+      <nav class="bg-black">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button
+                type="button"
+                class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!--
+                Icon when menu is closed.
+    
+                Menu open: "hidden", Menu closed: "block"
+              -->
+                <svg
+                  class="block h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+                <!--
+                Icon when menu is open.
+    
+                Menu open: "block", Menu closed: "hidden"
+              -->
+                <svg
+                  class="hidden h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+            >
+             
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a
+                    href="/index.html"
+                    class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                    aria-current="page"
+                    >Home</a
+                  >
+                  <a
+                    href="/pacifrica.html"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >Pacifrica</a
+                  >
+                  <a
+                    href="/myace.html"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >MyAce</a
+                  >
+                  <a
+                    href="/kwikiemart.html"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >KwikieMart</a
+                  >
+                  <a
+                    href="/pservices.html"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >PServices</a
+                  >
+                  <a
+                    href="/btwixt.html"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >BTwixt</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+            >
+              <button
+                type="button"
+                class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              >
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">View notifications</span>
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                  />
+                </svg>
+              </button>
+
+              <!-- Profile dropdown -->
+              <div class="relative ml-3">
+                <div>
+                  <button
+                    type="button"
+                    class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    id="user-menu-button"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                  >
+                    <span class="absolute -inset-1.5"></span>
+                    <span class="sr-only">Open user menu</span>
+                    <img
+                      class="h-8 w-8 rounded-full"
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a
+              href="#"
+              class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+              aria-current="page"
+              >Projects</a
+            >
+            <a
+              href="#"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              >Team</a
+            >
+            <a
+              href="#"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              >Projects</a
+            >
+            <a
+              href="#"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              >Calendar</a
+            >
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="w-4/5 mx-auto text-white">
+      <div>
+        <img
+          src="images/woowlook/rr.png"
+          class="w-full  object-contain"
+        />
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-x-16 text-white">
+        <div class="py-6 space-y-6 col-span-7">
+          <p class="text-lg lg:text-3xl font-semibold">
+            Woow-Look (Sallon App)
+          </p>
+          <p class="text-sm lg:text-md max-w-[350px] lg:max-w-7xl">
+            Woowlook is a pioneering project revolutionizing the personal grooming and salon services industry in the UK. This comprehensive platform not only facilitates easy online shopping for a variety of grooming products but also connects users with skilled salon service providers, creating a one-stop solution for all grooming needs.
+        
+          </p>
+          <p class="text-2xl font-semibold">User-Centric Account Management</p>
+          <p class="text-sm lg:text-md max-w-[350px] lg:max-w-7xl">
+            Woowlook prioritizes user experience, offering a user-friendly account management system where customers can seamlessly navigate between product purchases and salon service bookings.
+          </p>
+          <p class="text-2xl font-semibold">Diverse Seller Network</p>
+          <p class="text-sm lg:text-md max-w-[350px] lg:max-w-7xl">
+            The platform boasts a network of skilled sellers providing a range of salon services, including hair cutting, shaving, and more. These sellers are vetted for their expertise and commitment to quality service.
+          </p>
+          <p class="text-2xl font-semibold">Effortless Booking Process</p>
+          <p class="text-sm lg:text-md max-w-[350px] lg:max-w-7xl">
+            Users can easily browse through a list of reputable sellers, view their services, and book appointments directly through the Woowlook platform. The streamlined booking process ensures a hassle-free experience.
+          </p>
+          <p class="text-2xl font-semibold">Mobile App and Website</p>
+          <p class="text-sm lg:text-md max-w-[350px] lg:max-w-7xl">
+            Woowlook provides a seamless experience across devices with a dedicated mobile app and a responsive website. Users can effortlessly manage their grooming routines, purchase products, and schedule salon services from anywhere.
+          </p>
+          <p class="text-2xl font-semibold">Admin Section</p>
+          <p class="text-sm lg:text-md max-w-[350px] lg:max-w-7xl">
+            The admin section of Woowlook empowers administrators to oversee seller performance, manage bookings, and ensure a high standard of service quality. This ensures a reliable and consistent experience for users.
+          </p>
+         
+        </div>
+        <div class="col-span-5 py-6">
+          <div class="">
+            <p class="text-2xl md:text-3xl font-semibold">Project Information</p>
+            <div class="space-y-4 py-4">
+              <div>
+                <p class="opacity-50">Category</p>
+                <p class="text-lg font-semibold">Salon Service App</p>
+              </div>
+              <div>
+                <p class="opacity-50">Company</p>
+                <p class="text-lg font-semibold">Sigi Technology</p>
+              </div>
+              <div>
+                <p class="opacity-50">Project Date</p>
+                <p class="text-lg font-semibold">April ,2022</p>
+              </div>
+              <div>
+                <p class="opacity-50">Project URL</p>
+                <a
+                  href="https://woowlook.zeeshannawaz.com"
+                  class="text-lg font-semibold"
+                  >https://woowlook.zeeshannawaz.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="text-3xl font-semibold">Tools</p>
+            <div class="space-y-4 py-4">
+              <div>
+                <p class="opacity-50">Front End</p>
+                <p class="text-lg font-semibold">Html , Css , Bootstrap 4</p>
+              </div>
+              <div>
+                <p class="opacity-50">Backend</p>
+                <p class="text-lg font-semibold">
+                 Laravel PHP
+                </p>
+              </div>
+              <div>
+                <p class="opacity-50">Database</p>
+                <p class="text-lg font-semibold">MySQL</p>
+              </div>
+              <div>
+                <p class="opacity-50">Structure</p>
+                <p class="text-lg font-semibold">
+                  <ul>
+                    <li>Admin Dashboard</li>
+                    <li>Front Website</li>
+                    <li>Customer Mobile App</li>
+                    <li>Seller Mobile App</li>
+                   
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-6">
+        <p class="text-3xl font-semibold py-6">Project Gallery</p>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+          <div class="flex justify-center">
+            <img src="images/woowlook/rr.png" class="w-[500px] rounded-xl object-contain" />
+          </div>
+          <div class="flex justify-center">
+            <img src="images/woowlook/2.png" class="w-[600px] rounded-xl object-contain" />
+          </div>
+          <div class="flex justify-center">
+            <img src="images/woowlook/3.png" class="w-[300px] rounded-xl object-contain" />
+          </div>
+          <div class="flex justify-center">
+            <img src="images/woowlook/4.png" class="w-[400px] rounded-xl object-contain" />
+          </div>
+          <div class="flex justify-center">
+            <img src="images/woowlook/5.png" class="w-[400px] rounded-xl object-contain" />
+          </div>
+          
+       
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

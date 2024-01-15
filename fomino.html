@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <title>Document</title>
+  </head>
+  <body class="bg-black">
+    <div>
+      <nav class="bg-black">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button
+                type="button"
+                class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!--
+                Icon when menu is closed.
+    
+                Menu open: "hidden", Menu closed: "block"
+              -->
+                <svg
+                  class="block h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+                <!--
+                Icon when menu is open.
+    
+                Menu open: "block", Menu closed: "hidden"
+              -->
+                <svg
+                  class="hidden h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+            >
+             
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a
+                    href="/index.html"
+                    class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                    aria-current="page"
+                    >Home</a
+                  >
+                  <a
+                    href="/pacifrica.html"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >Pacifrica</a
+                  >
+                  <a
+                    href="/myace.html"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >MyAce</a
+                  >
+                  <a
+                    href="/kwikiemart.html"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >KwikieMart</a
+                  >
+                  <a
+                    href="/pservices.html"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >PServices</a
+                  >
+                  <a
+                    href="/btwixt.html"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    >BTwixt</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+            >
+              <button
+                type="button"
+                class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              >
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">View notifications</span>
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                  />
+                </svg>
+              </button>
+
+              <!-- Profile dropdown -->
+              <div class="relative ml-3">
+                <div>
+                  <button
+                    type="button"
+                    class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    id="user-menu-button"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                  >
+                    <span class="absolute -inset-1.5"></span>
+                    <span class="sr-only">Open user menu</span>
+                    <img
+                      class="h-8 w-8 rounded-full"
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a
+              href="#"
+              class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+              aria-current="page"
+              >Projects</a
+            >
+            <a
+              href="#"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              >Team</a
+            >
+            <a
+              href="#"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              >Projects</a
+            >
+            <a
+              href="#"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              >Calendar</a
+            >
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="w-4/5 mx-auto text-white">
+      <div>
+        <img
+          src="images/fomino/1.png"
+          class="w-full  object-contain"
+        />
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-x-16 text-white">
+        <div class="py-6 space-y-6 col-span-7">
+          <p class="text-lg lg:text-3xl font-semibold">
+            Fomino (Food Booking Mobile App & Web)
+          </p>
+          <p class="text-sm lg:text-md max-w-[350px] lg:max-w-7xl">
+            Fomino is a cutting-edge food booking application that has redefined the gastronomic landscape, offering a delightful culinary journey for users. As a user-centric platform, Fomino simplifies the process of discovering, ordering, and relishing a diverse array of cuisines from the comfort of one's home. Developed by an innovative company, Fomino is your go-to destination for an elevated food ordering experience.
+            Fomino brings together a curated selection of restaurants, providing users with a diverse range of culinary options. From local favorites to international delights, the platform caters to every taste preference.
+            The user interface of Fomino is designed for simplicity and ease of use. Customers can effortlessly navigate through menus, customize their orders, and make bookings seamlessly, ensuring a hassle-free experience.
+        </p>
+          <p class="text-2xl font-semibold">Challenges faced by Fomino</p>
+          <p class="text-sm lg:text-md max-w-[350px] lg:max-w-7xl">
+            Before partnering with Sigi Technologies, Fomino encountered various challenges in the highly competitive food delivery industry. The existing delivery processes were often time-consuming, leading to delays and dissatisfied customers. Fomino sought a solution that would streamline their operations and deliver a superior user experience.
+          </p>
+          <p class="text-2xl font-semibold">The Sigi advantage</p>
+          <p class="text-sm lg:text-md max-w-[350px] lg:max-w-7xl">
+            Partnering with Sigi Technologies provided Fomino with a distinct advantage. Our expertise in software development and user experience allowed us to revamp their platform and address their unique challenges, resulting in a more efficient and customer-centric food delivery service.
+          </p>
+          <p class="text-2xl font-semibold">Enhancing the User Experience</p>
+          <p class="text-sm lg:text-md max-w-[350px] lg:max-w-7xl">
+            Fomino's success hinged on delivering a delightful user experience. We redesigned their platform to provide intuitive and user-friendly navigation, ensuring that customers could effortlessly browse restaurants, explore menus, and place orders with ease.
+          </p>
+          <p class="text-2xl font-semibold">User-Friendly Interface and Navigation</p>
+          <p class="text-sm lg:text-md max-w-[350px] lg:max-w-7xl">
+            We focused on creating a visually appealing and intuitive interface that made ordering food a breeze. From seamless navigation to clear categorization and filtering options, we ensured that Fomino's customers could find their desired meals quickly and easily.
+          </p>
+          <p class="text-2xl font-semibold">Streamlined Ordering Process</p>
+          <p class="text-sm lg:text-md max-w-[350px] lg:max-w-7xl">
+            We optimized the ordering process to be swift and hassle-free. Fomino's customers could customize their orders, specify dietary preferences, and add special instructions, all through a seamless and intuitive interface.
+          </p>
+          <p class="text-2xl font-semibold">Wide Variety of Restaurants and Menus</p>
+          <p class="text-sm lg:text-md max-w-[350px] lg:max-w-7xl">
+            Fomino aimed to provide an extensive selection of restaurants and menus to cater to diverse customer preferences. We worked closely with Fomino to onboard a wide range of culinary establishments, offering customers an expansive choice of cuisines and dishes.
+          </p>
+          <p class="text-2xl font-semibold">Personalized Recommendations and Offers</p>
+          <p class="text-sm lg:text-md max-w-[350px] lg:max-w-7xl">
+            Understanding the importance of personalization, we implemented intelligent algorithms that analyzed user preferences and order history. This enabled Fomino to offer personalized recommendations and exclusive deals to enhance customer engagement and satisfaction.
+          </p>
+        </div>
+        <div class="col-span-5 py-6">
+          <div class="">
+            <p class="text-2xl md:text-3xl font-semibold">Project Information</p>
+            <div class="space-y-4 py-4">
+              <div>
+                <p class="opacity-50">Category</p>
+                <p class="text-lg font-semibold">Food Booking App & Website</p>
+              </div>
+              <div>
+                <p class="opacity-50">Company</p>
+                <p class="text-lg font-semibold">Sigi Technology</p>
+              </div>
+              <div>
+                <p class="opacity-50">Project Date</p>
+                <p class="text-lg font-semibold">August ,2023</p>
+              </div>
+              <div>
+                <p class="opacity-50">Project URL</p>
+                <a
+                  href="https://myace.app"
+                  class="text-lg font-semibold"
+                  >https://myace.app</a
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <p class="text-3xl font-semibold">Tools</p>
+            <div class="space-y-4 py-4">
+              <div>
+                <p class="opacity-50">Front End</p>
+                <p class="text-lg font-semibold">React Js ,Laravel, Tailwind CSS , Bootstrap</p>
+              </div>
+              <div>
+                <p class="opacity-50">Backend</p>
+                <p class="text-lg font-semibold">
+                  NodeJs , ExpressJs , Laravel , Redis , Firebase 
+                </p>
+              </div>
+              <div>
+                <p class="opacity-50">Database</p>
+                <p class="text-lg font-semibold">MySQL , Redis</p>
+              </div>
+              <div>
+                <p class="opacity-50">Structure</p>
+                <p class="text-lg font-semibold">
+                  <ul>
+                    <li>Admin Dashboard</li>
+                    <li>Retailer Dashboard</li>
+                    <li>Customer Mobile App</li>
+                    <li>Seller Mobile App</li>
+                    <li>Driver Mobile App</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-6">
+        <p class="text-3xl font-semibold py-6">Project Gallery</p>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+          <div class="flex justify-center">
+            <img src="images/fomino/1.png" class="w-[500px] rounded-xl object-contain" />
+          </div>
+          <div class="flex justify-center">
+            <img src="images/fomino/2.png" class="w-[600px] rounded-xl object-contain" />
+          </div>
+          <div class="flex justify-center">
+            <img src="images/fomino/3.png" class="w-[300px] rounded-xl object-contain" />
+          </div>
+          <div class="flex justify-center">
+            <img src="images/fomino/4.png" class="w-[400px] rounded-xl object-contain" />
+          </div>
+          <div class="flex justify-center">
+            <img src="images/fomino/5.png" class="w-[400px] rounded-xl object-contain" />
+          </div>
+          <div class="flex justify-center">
+            <img src="images/fomino/6.png" class="w-[400px] rounded-xl object-contain" />
+          </div>
+          
+       
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
